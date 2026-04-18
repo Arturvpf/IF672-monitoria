@@ -4,26 +4,26 @@
 
 1. **Introdução às listas**
 2. **Monitoria**
-    1. Monitorias presenciais
-    2. Discord da disciplina
+ 1. Monitorias presenciais
+ 2. Discord da disciplina
 
 3. **Apresentação do ambiente Iudex**
-    1. Vereditos
-    2. Observações
+ 1. Vereditos
+ 2. Observações
 
 4. **Bibliotecas permitidas**
-    1. C/C++
-    2. Python
+ 1. C/C++
+ 2. Python
 5. **Comandos de terminal (C/C++)**
-    1. Compilação
-    2. Entrada e Saída
-    3. Tempo de execução
-    4. Outras Flags
+ 1. Compilação
+ 2. Entrada e Saída
+ 3. Tempo de execução
+ 4. Outras Flags
 6. **Erros comuns e dicas**
-    1. Profiling
-    2. Otimizações
-    3. Diagnosticando Runtime Errors (RTE)
-    4. Gerando casos teste
+ 1. Profiling
+ 2. Otimizações
+ 3. Diagnosticando Runtime Errors (RTE)
+ 4. Gerando casos teste
 7. **Referências úteis**
 
 ## 1. Introdução às listas
@@ -138,7 +138,7 @@ gcc -o [nome do executável] [nome do programa]
 
 ```
 gcc -o a lista2.c
-./a 
+./a
 ```
 
 Obs: também é possível rodar C com o compilador clang e C++ com clang++
@@ -185,7 +185,7 @@ diff arquivo1.txt arquivo2.txt
 Aparentemente, é possível que o diff não funcione no Command Prompt do Windows, sendo necessário baixar pacotes adicionais: ver esse [link](https://stackoverflow.com/questions/6877238/what-is-the-windows-equivalent-of-the-diff-command)
 
 Outra opção é usar o [diffchecker](https://www.diffchecker.com/)
-      
+
 ### 5.3 Tempo de execução
 
 ##### Sintaxe:
@@ -212,14 +212,14 @@ Como ele vai se comportar à medida que a entrada aumenta? O que acontece quando
 ```
 g++ -o a a.cpp -stdc++17
 ```
-  
+
 *(c++ 17 é a versão utilizada no iudex)*
 
 Versões disponíveis:
 
 * -std=c++11 (ISO C++11)
 * -std=c++14 (ISO C++14)
-* -std=c++1z ou -std=c++17 (ISO C++17) 
+* -std=c++1z ou -std=c++17 (ISO C++17)
 * -std=c++20 (C++20)
 
 
@@ -276,7 +276,7 @@ g++ main.cpp -o main -fsanitize=undefined
 
 ### 6.1 Profiling
 
-Em termos simples, Profiling é a análise de performance de código em tempo de execução. Entre outras coisas, ferramentas de profiling retornam o tempo gasto em cada função e o número de chamadas de funções. Isso é útil para encontrar ineficiências. 
+Em termos simples, Profiling é a análise de performance de código em tempo de execução. Entre outras coisas, ferramentas de profiling retornam o tempo gasto em cada função e o número de chamadas de funções. Isso é útil para encontrar ineficiências.
 
 #### Profiling em C++
 
@@ -285,7 +285,7 @@ Em termos simples, Profiling é a análise de performance de código em tempo de
 ```
 g++ -pg -o my_program my_program.cpp // compila programa com flag -pg
 ./my_program // executa
-gprof my_program gmon.out > analysis.txt // joga saída (gmon.out por padrão) em um arquivo txt 
+gprof my_program gmon.out > analysis.txt // joga saída (gmon.out por padrão) em um arquivo txt
 ```
 
 #### Profiling em Python
@@ -352,26 +352,26 @@ int busca(vetor& meu_vetor) // passa por referência (operador &): vetor não é
 ##### Causas Comuns
 - Acessos a regiões de memória proibidos (Ponteiro nulo, objetos fora de escopo, índice inválido de array)
 - Variáveis não inicializadas (podem gerar comportamento inesperado em algum momento na execução)
-- Divisão por zero 
+- Divisão por zero
 
 ##### Flags de compilação
 
-as flags `-fsanitize=address` e `fsanitize=undefined` são capazes de identificar grande parte dos erros em tempo de execução. 
+as flags `-fsanitize=address` e `fsanitize=undefined` são capazes de identificar grande parte dos erros em tempo de execução.
 
 ### 6.4 Gerando casos teste
 
 É possível gerar casos automaticamente para testar o seu código utilizando um
 programa. Um exemplo de script para geração de casos está presente nesse repositório.
 
-Para casos pequenos, também é possível pedir que o Chat GPT, ou equivalente, gere uma entrada (possivelmente incorreta) para o programa seguindo a especificação dada. 
+Para casos pequenos, também é possível pedir que o Chat GPT, ou equivalente, gere uma entrada (possivelmente incorreta) para o programa seguindo a especificação dada.
 
 Para teste de algoritmos e estruturas de dados bem conhecidas, é possível buscar problemas relacionados no Leetcode e testar a sua implementação.
 
 ## 7. Referências úteis
 
 [Anotações completas - algoritmos](https://github.com/pierreoria/p2/blob/main/apostila-algoritmos_compressed.pdf): Anotações IF672 com Paguso (Pseudocódigo e análises de complexidade)
-   
-[VisuAlgo](https://visualgo.net/en): Visualizações de Algoritmos 
+
+[VisuAlgo](https://visualgo.net/en): Visualizações de Algoritmos
 
 [Abdul Bari](https://www.youtube.com/channel/UCZCFT11CWBi3MHNlGf019nw): Videoaulas
 
